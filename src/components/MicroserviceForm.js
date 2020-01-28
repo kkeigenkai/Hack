@@ -184,7 +184,7 @@ export const MicroserviceForm = ({ handleData, oldName, oldLanguage, oldTag, old
               {microservices !== undefined &&
               microservices.map(microservice => {
                 return (
-                  <option key={microservice.id}>{microservice.id}</option>
+                  <option key={microservice.id}>{microservice.id + " " + microservice.name}</option>
                 );
               })}
             </Form.Control>
@@ -196,7 +196,7 @@ export const MicroserviceForm = ({ handleData, oldName, oldLanguage, oldTag, old
               {microservices !== undefined &&
               microservices.map(microservice => {
                 return (
-                  <option key={microservice.id}>{microservice.id}</option>
+                  <option key={microservice.id}>{microservice.id + " " + microservice.name}</option>
                 );
               })}
             </Form.Control>
