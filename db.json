@@ -1,0 +1,95 @@
+{
+  "microservices": [
+    {
+      "id": "1",
+      "name": "СМС",
+      "tag": [
+        "#сообщения",
+        "#почта"
+      ],
+      "status": 3,
+      "developers": [
+        {
+          "name": "John Doe",
+          "email": "johndoe@gmail.com"
+        }
+      ],
+      "description": "Модуль реализует перессылку сообщений",
+      "language": "JS",
+      "docs": "# Docs"
+    },
+    {
+      "id": "2",
+      "name": "Почта",
+      "tag": [
+        "#сообщения",
+        "#почта"
+      ],
+      "status": 3,
+      "developers": [
+        {
+          "name": "John Doe",
+          "email": "johndoe@gmail.com"
+        },
+        {
+          "name": "Alon Pike",
+          "email": "alonpike@gmail.com"
+        }
+      ],
+      "description": "Модуль реализует перессылку почты",
+      "language": "С#",
+      "docs": "# Docs 1"
+    },
+    {
+      "id": 3,
+      "name": "Data Transfere",
+      "tag": [
+        "#communication"
+      ],
+      "status": 1,
+      "developers": [
+        {
+          "name": "John Carmak",
+          "email": "john@gmail.con"
+        }
+      ],
+      "description": "",
+      "language": "golang",
+      "docs": "# Docs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "1",
+      "name": "СМС",
+      "val": 1
+    },
+    {
+      "id": "2",
+      "name": "Почта",
+      "val": 1
+    },
+    {
+      "id": "3",
+      "name": "Data Transfere",
+      "val": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "1",
+      "target": "2",
+      "id": 1
+    },
+    {
+      "source": "1",
+      "target": "3",
+      "id": 2
+    },
+    {
+      "source": "3",
+      "target": "2",
+      "id": 3
+    }
+  ]
+}
