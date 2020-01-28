@@ -13,6 +13,7 @@ import { Microservice } from './pages/Microservice';
 import { Sort } from './components/Sort';
 import axios from 'axios';
 import { Add } from './pages/Add';
+import { Desc } from './pages/Desc';
 
 const DB = 'http://localhost:3000/microservices';
 
@@ -160,6 +161,9 @@ export const App = () => {
         <Route path="/add">
           <Add microservices={microservices}
                addMicroservice={addMicroservice}/>
+        </Route>
+        <Route path="/">
+          <Desc />
         </Route>
       </Switch>
     </Router>
