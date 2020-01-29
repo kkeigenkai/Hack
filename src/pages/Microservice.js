@@ -7,7 +7,7 @@ import { Documentation } from '../components/Documentation';
 import { Link } from 'react-router-dom';
 import { Connection } from '../components/Connection';
 
-export const Microservice = ({ microservice, editMicroservice, handleSort }) => {
+export const Microservice = ({ microservice, editMicroservice, handleSort, setMicroservice }) => {
   useEffect(() => {
     if (microservice.name !== undefined) {
       localStorage.ms = JSON.stringify(microservice);
@@ -32,7 +32,7 @@ export const Microservice = ({ microservice, editMicroservice, handleSort }) => 
           <Documentation microservice={microservice}/>
         </Tab>
         <Tab eventKey="Connection" title="Connection">
-          <Connection />
+          <Connection setMicroservice={setMicroservice} />
         </Tab>
       </Tabs>
     </Container>

@@ -45,7 +45,6 @@ export const App = () => {
   
   const handleRadio = (v) => {
     setRadio(v);
-    console.log(v);
   };
   
   const addMicroservice = (
@@ -154,7 +153,7 @@ export const App = () => {
                 microservices={microservices}/>
         </Route>
         <Route path="/microservice">
-          <Microservice handleSort={handleSort}
+          <Microservice setMicroservice={setMicroservice} handleSort={handleSort}
                         editMicroservice={editMicroservice}
                         microservice={microservice}/>
         </Route>

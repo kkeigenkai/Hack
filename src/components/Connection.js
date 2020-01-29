@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ForceGraph2D } from 'react-force-graph';
 import axios from 'axios';
 
-const DB = 'http://localhost:3000/connections';
-
-export const Connection = () => {
+export const Connection = ({ setMicroservice }) => {
   const [source, setSource] = useState({
     'nodes': [
       {
@@ -25,6 +23,7 @@ export const Connection = () => {
       },
     ],
   });
+  
   useEffect(() => {
     async function fetchData () {
       const nodes = await axios.get('http://localhost:3000/nodes');
@@ -32,7 +31,6 @@ export const Connection = () => {
       setSource({
         'nodes': nodes.data, 'links': links.data,
       });
-      console.log(nodes.data);
     }
     
     fetchData();
@@ -40,8 +38,9 @@ export const Connection = () => {
   
   return (
     <>
-      {console.log(source)}
-      <ForceGraph2D linkDirectionalParticles={1} linkDirectionalArrowLength={1} graphData={source}/>
+      <ForceGraph2D nodeOpacity={0.99}
+                    linkDirectionalParticles={1} linkDirectionalArrowLength={1}
+                    graphData={source}/>
     </>
   );
 };

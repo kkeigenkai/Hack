@@ -18,6 +18,55 @@ code {
 }
 
 .item_of_list {
-  max-width: 32%;
-  width: 32%;
+  width: 20rem;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+
+.List {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sort_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.sort_form .form_btn {
+  display: block !important;
+  height: 38px;
+}
+
+.form_md {
+  margin-right: 15px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+@media screen and (max-width:650px) {
+  .item_of_list {
+    margin-right: 0;
+  }
+
+  .List {
+    justify-content: center;
+  }
+  .sort_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form_md {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }

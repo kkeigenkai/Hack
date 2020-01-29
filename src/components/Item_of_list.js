@@ -15,7 +15,7 @@ export const Item_of_list = ({ handleSort, microservice, handleMicroservice }) =
   };
   
   return (
-    <Card className={'mb-3 mr-auto item_of_list'}>
+    <Card className={'item_of_list'} >
       <Card.Header>
         <Link onClick={() => {handleClick(microservice.id);}}
               to={'/microservice'}>{microservice.name}</Link>
