@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn json-server --watch db.json`
+
+Runs the json-server
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
